@@ -1,4 +1,258 @@
-<h1 class="text-3xl font-bold underline">
-    Hello world!
-</h1>
-<p>pomada-lyberdade works!</p>
+<main>
+    <section class="p-20 s-top">
+        <div class="flex flex-wrap justify-center">
+            <div>
+                <figure>
+                    <img src="assets/images/lyberdade-lp/pomada-lyberdade-with-logo.png" alt="pomada-lyberdade"
+                        class="max-h-120">
+                </figure>
+            </div>
+            <div class="text-xl md:ml-10">
+                <h1 class="my-8 font-bold text-3xl md:text-5xl">ESCOLHA VIVER SEM DOR</h1>
+                <div class="flex items-center mb-2">
+                    <img src="assets/images/icons/check.png" alt="icon-check" class="w-6 h-6">
+                    <P class="ml-2">Alívio de dores musculares</P>
+                </div>
+                <div class="flex items-center mb-2">
+                    <img src="assets/images/icons/check.png" alt="icon-check" class="w-6 h-6">
+                    <P class="ml-2">Pernas leves e descansadas</P>
+                </div>
+                <div class="flex items-center mb-2">
+                    <img src="assets/images/icons/check.png" alt="icon-check" class="w-6 h-6">
+                    <P class="ml-2">Ação refrescante e relaxante</P>
+                </div>
+                <div class="flex items-center mb-2">
+                    <img src="assets/images/icons/check.png" alt="icon-check" class="w-6 h-6">
+                    <P class="ml-2">Alívio de dores lombares e nas articulações</P>
+                </div>
+                <div class="flex items-center mb-2">
+                    <img src="assets/images/icons/check.png" alt="icon-check" class="w-6 h-6">
+                    <P class="ml-2">Ação rápida e eficaz</P>
+                </div>
+                <div class="flex items-center">
+                    <img src="assets/images/icons/check.png" alt="icon-check" class="w-6 h-6">
+                    <P class="ml-2">Fácil aplicação</P>
+                </div>
+                <div class="mt-7">
+                    <button class="btn-primary font-bold cursor-pointer pulse-sale-btn"
+                        (click)="scrollToSection('sale')">
+                        QUERO VIVER SEM DOR!
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bg-primary-color">
+        <div class="bg-secondary-color marquee-container">
+            <p class="marquee-text">
+                Escolha viver sem dor &bull; Escolha viver sem dor &bull; Escolha viver sem dor &bull; Escolha
+                viver sem dor &bull; Escolha viver sem dor &bull; Escolha viver sem dor
+            </p>
+        </div>
+        <div class="flex flex-wrap">
+            <div class="flex flex-col p-12 max-w-150">
+                <div class="second-section mb-8">
+                    <h1 class="text-3xl md:text-4xl bg-secondary-color font-bold max-w-fit">Chega de dor!</h1>
+                    <div class="max-w-80">
+                        <p class="text-3xl font-extralight">A pomada Lyberdade foi feita para você!</p>
+                    </div>
+                    <div class="text-lg">
+                        <p>Se você <span class="font-bold">sofre</span> <span class="font-bold">com dores nas costas,
+                                pernas,
+                                articulações ou músculos
+                                cansados...</span></p>
+                        <p>Com <span class="font-bold">ação rápida</span> e <span class="font-bold">fórmula
+                                potente</span>,
+                            ela <span class="font-bold">alívia o desconforto</span> e <span class="font-bold">desenvolve
+                                o
+                                bem-estar</span>
+                            que você
+                            merece.
+                        </p>
+                        <p class="bg-secondary-color max-w-fit font-thin mt-8">Pomada Lyberdade: Escolha viver sem dor!
+                        </p>
+                    </div>
+                </div>
+                <button class="btn-primary font-bold max-w-72 cursor-pointer pulse-sale-btn-secondary"
+                    (click)="scrollToSection('sale')">
+                    QUERO PROVAR!
+                </button>
+            </div>
+            <div class="flex-1 flex justify-end pr-18 2xl:pr-32 bg-senhora">
+                <figure class="p-8">
+                    <img src="assets/images/lyberdade-lp/pomada-sem-cx.png" alt="pomada-sem-caixa"
+                        class="h-[450px] min-w-[180px] rotate-25">
+                </figure>
+            </div>
+        </div>
+    </section>
+    <section class="relative pb-12 bg-primary-color">
+        <div class="absolute top-1/3 right-0 z-1 opacity-20">
+            <figure class="figure-benefit">
+                <img src="/assets/images/logo-siga-natural-circular-trans-q.png" alt="logo-siga" class="w-110">
+            </figure>
+        </div>
+        <div class="mb-24 text-center text-3xl font-bold p-3.5 bg-secondary-color md:text-5xl">
+            <h2>BENEFÍCIOS</h2>
+        </div>
+        <div class="flex flex-wrap justify-center gap-24 mb-24 lg:gap-38 lg:mb-0 relative z-2">
+            <div class="flex flex-col p-3.5 w-42 rounded-3xl bg-secondary-color">
+                <figure class="figure-benefit">
+                    <img src="assets/images/lyberdade-lp/benefits/dor-nas-costas.png" alt="dor-nas-costas"
+                        class="w-24 border-r-circle benefit-animate" [ngClass]="{ 'in-view': imagesInViewBenefit[0] }">
+                </figure>
+                <p class="text-sm font-thin">
+                    Indicado para tratar
+                    <span class="font-bold">dores nas costas, torcicolos, contusões,
+                        distensões e
+                        tensões musculares.
+                    </span>
+                </p>
+            </div>
+            <div class="flex flex-col p-3.5 w-42 rounded-3xl bg-secondary-color">
+                <figure class="figure-benefit">
+                    <img src="assets/images/lyberdade-lp/benefits/dor-na-barriga.png" alt="dor-na-barriga"
+                        class="w-24 border-r-circle benefit-animate" [ngClass]="{ 'in-view': imagesInViewBenefit[1] }">
+                </figure>
+                <p class="text-sm font-thin">
+                    Seus componentes ajudam a
+                    <span class="font-bold">combater inflamações</span>
+                    proporcionando alívio mais rápido.
+                </p>
+            </div>
+            <div class="flex flex-col p-3.5 w-42 rounded-3xl bg-secondary-color">
+                <figure class="figure-benefit">
+                    <img src="assets/images/lyberdade-lp/benefits/panturrilha.png" alt="panturrilha"
+                        class="w-24 border-r-circle benefit-animate" [ngClass]="{ 'in-view': imagesInViewBenefit[2] }">
+                </figure>
+                <p class="text-sm font-thin">
+                    O uso da pomada ajuda a
+                    <span class="font-bold">ativar a circulação</span>
+                    na região aplicada, contribuindo para a
+                    <span class="font-bold">recuperação muscular.</span>
+                </p>
+            </div>
+        </div>
+        <div class="flex flex-wrap justify-center gap-24 lg:gap-38 relative z-2">
+            <div class="flex flex-col p-3.5 w-42 rounded-3xl bg-secondary-color">
+                <figure class="figure-benefit">
+                    <img src="assets/images/lyberdade-lp/benefits/dor-na-mao.png" alt="dor-nas-costas"
+                        class="w-24 border-r-circle benefit-animate" [ngClass]="{ 'in-view': imagesInViewBenefit[3] }">
+                </figure>
+                <p class="text-sm font-thin">
+                    Pode ser usada como auxiliar no tratamento de sintomas de
+                    <span class="font-bold">reumatismo</span>
+                    e
+                    <span class="font-bold">artrite.</span>
+                </p>
+            </div>
+            <div class="flex flex-col p-3.5 w-42 rounded-3xl bg-secondary-color">
+                <figure class="figure-benefit">
+                    <img src="assets/images/lyberdade-lp/benefits/mulher-ginastica.png" alt="dor-na-barriga"
+                        class="w-24 border-r-circle  benefit-animate" [ngClass]="{ 'in-view': imagesInViewBenefit[4] }">
+                </figure>
+                <p class="text-sm font-thin">
+                    Contém mentol e cânfora, que proporcionam uma
+                    <span class="font-bold">sensação de frescor e bem-estar</span>
+                    na aplicação.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="bg-blue-gradient">
+        <div class="flex flex-col items-center p-12">
+            <h2 class="text-center text-sm max-w-fit font-bold text-center bg-primary-color m-auto md:text-2xl">
+                CHEGOU A SOLUÇÃO QUE SEU CORPO PRECISA:
+            </h2>
+            <p class="text-lg text-center font-thin md:text-2xl">
+                Pomada Lyberdade! Com fórmula poderosa, ela age direto na causa da dor, aliviando rapidamente dores
+                musculares, nas articulações, lombar, pernas cansadas, artrite, artrose, bursite e tendinite.
+            </p>
+            <button class="mt-5 py-3.5 px-4 w-72 font-bold rounded-full bg-primary-color cursor-pointer pulse-sale-btn"
+                (click)="scrollToSection('sale')">
+                QUERO ME LIVRAR DAS DORES!
+            </button>
+        </div>
+    </section>
+    <section class="bg-primary-color">
+        <div class="flex justify-between flex-wrap">
+            <div class="m-auto p-8">
+                <figure>
+                    <img src="assets/images/lyberdade-cx-l.png" alt="pomada-lyberdade" class="h-[400px]">
+                </figure>
+            </div>
+            <div class="p-12">
+                <h2 class="text-3xl font-bold md:text-4xl">
+                    PARA QUEM É INDICADO A
+                </h2>
+                <h2 class="text-3xl font-bold bg-secondary-color max-w-fit md:text-4xl">POMADA LYBERDADE?</h2>
+                <ul class="p-9 list-disc text-2xl">
+                    <li>Mecânicos</li>
+                    <li>Pedreiros</li>
+                    <li>Costureiras</li>
+                    <li>Atletas</li>
+                    <li>Donas de Casa</li>
+                </ul>
+                <button class="btn-primary font-bold w-72 hard-shadwon">
+                    ADQUIRIR O MEU!
+                </button>
+            </div>
+        </div>
+    </section>
+    <section id="sale" class="bg-primary-color py-12">
+        <div class="flex justify-around flex-wrap items-end">
+            <div>
+                <div class="flex flex-col px-12 py-2 w-72 rounded-[4rem] hard-shadwon bg-secondary-color md:w-78">
+                    <h3 class="text-2xl text-center font-bold mb-3.5 min-w-[218px]">Valor do produto</h3>
+                    <figure>
+                        <img src="assets/images/lyberdade-cx-l.png" alt="pomada-lyberdade" class="max-h-64">
+                    </figure>
+                    <button class="mt-5 mb-3 py-3.5 px-4 font-bold rounded-full hard-shadwon bg-primary-color">
+                        49,90 A UNIDADE
+                    </button>
+                </div>
+                <button class="mt-5 mb-3 py-3.5 px-4 w-72 font-bold rounded-full hard-shadwon bg-primary-color">
+                    COMPRAR AGORA!
+                </button>
+            </div>
+            <div>
+                <div
+                    class="flex flex-col mt-12 px-12 py-2 w-72 rounded-[4rem] hard-shadwon bg-secondary-color md:w-78 md:mt-0">
+                    <h3 class="text-2xl text-center font-bold mb-3.5">Valor para revendedores</h3>
+                    <figure>
+                        <img src="assets/images/lyberdade-cx-l.png" alt="pomada-lyberdade" class="max-h-64">
+                    </figure>
+                    <button class="mt-5 mb-3 py-3.5 px-4 font-bold rounded-full hard-shadwon bg-primary-color">
+                        <p>6 unidades por</p>
+                        <p>29,90 A UNIDADE</p>
+                    </button>
+                </div>
+                <button class="mt-5 mb-3 py-3.5 px-4 w-72 font-bold rounded-full hard-shadwon bg-primary-color">
+                    QUERO SER UM REVENDEDOR
+                </button>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="text-center text-3xl font-bold p-3.5 bg-secondary-color md:text-5xl">
+            <h2>ALIVIE AS DORES AGORA!</h2>
+        </div>
+    </section>
+    <footer class="flex flex-wrap justify-between items-center bg-secondary-color p-12">
+        <div>
+            <div class="flex mb-3.5">
+                <img src="assets/images/icons/telefone.png" alt="icon-phone">
+                <p class="mx-3.5">(81) 99417-7110</p>
+            </div>
+            <div class="flex">
+                <img src="assets/images/icons/email.png" alt="icon-phone">
+                <p class="mx-3.5">atendimento&#64;siganatural.com.br</p>
+            </div>
+        </div>
+        <div class="flex justify-center w-full md:w-auto mt-4 md:mt-0">
+            <figure>
+                <img src="assets/images/logo-siga-natural-completa.png" alt="logo-siga" class="w-32">
+            </figure>
+        </div>
+    </footer>
+</main>

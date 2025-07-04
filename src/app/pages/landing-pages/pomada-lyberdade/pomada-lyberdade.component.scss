@@ -1,0 +1,135 @@
+main {
+  height: 100vh;
+  background: var(--lyberdade-primary-color);
+  color: white;
+  .s-top {
+    background: #fff;
+    background: linear-gradient(
+      41deg,
+      rgba(255, 255, 255, 1) -70%,
+      rgba(65, 130, 117, 1) 70%,
+      rgba(255, 255, 255, 1) 120%
+    );
+  }
+
+  .btn-primary {
+    border-radius: var(--border-radius-default);
+    background-color: var(--lyberdade-secondary-color);
+    padding: 10px 15px;
+  }
+
+  .second-section {
+    padding-left: 15px;
+    border-left: solid 10px var(--lyberdade-secondary-color);
+  }
+
+  .bg-secondary-color {
+    background: var(--lyberdade-secondary-color) !important;
+  }
+  .bg-primary-color {
+    background: var(--lyberdade-primary-color);
+  }
+
+  .bg-blue-gradient {
+    background: #000c73;
+    background: linear-gradient(
+      80deg,
+      rgba(0, 12, 115, 1) 95%,
+      rgba(0, 12, 115, 0.2) 115%,
+      rgba(0, 12, 155, 0.1) 50%
+    );
+  }
+
+  // Benefit Section
+  .border-r-circle {
+    border-radius: 100%;
+  }
+
+  .benefit-animate {
+    opacity: 0;
+    transform: translateX(-60px);
+    transition: opacity 1.7s ease, transform 2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .benefit-animate.in-view {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .hard-shadwon {
+    box-shadow: 10px 10px 5px rgb(0, 0, 0, 0.2);
+  }
+
+  .figure-benefit {
+    margin: -60px auto 0 auto;
+  }
+
+  .bg-senhora {
+    background-image: url("/assets/images/lyberdade-lp/senhora-com-sombra.png");
+    background-size: cover;
+  }
+
+  .pulse-sale-btn {
+    animation: pulse-sale-btn 1.5s infinite;
+  }
+
+  @keyframes pulse-sale-btn {
+    0% {
+      transform: scale(1);
+      box-shadow: 0 0 0 0 rgba(65, 130, 117, 0.8);
+    }
+    70% {
+      transform: scale(1.08);
+      box-shadow: 0 0 0 16px rgba(65, 130, 117, 0.2);
+    }
+    100% {
+      transform: scale(1);
+      box-shadow: 0 0 0 0 rgba(65, 130, 117, 0);
+    }
+  }
+
+  .pulse-sale-btn-secondary {
+    animation: pulse-sale-btn-secondary 1.5s infinite;
+  }
+
+  @keyframes pulse-sale-btn-secondary {
+    0% {
+      transform: scale(1);
+      box-shadow: 0 0 0 0 rgba(0, 12, 115, 0.8);
+    }
+    70% {
+      transform: scale(1.08);
+      box-shadow: 0 0 0 16px rgba(0, 12, 115, 0.2);
+    }
+    100% {
+      transform: scale(1);
+      box-shadow: 0 0 0 0 rgba(0, 12, 115, 0);
+    }
+  }
+
+  //Letreiro Marquee
+  .marquee-container {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    position: relative;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .marquee-text {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee-move 15s linear infinite;
+    font-size: 1.5rem;
+  }
+
+  @keyframes marquee-move {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+}
