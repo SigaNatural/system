@@ -1,4 +1,4 @@
-<main>
+<main class="relative">
     <section class="p-20 s-top">
         <div class="flex flex-wrap justify-center">
             <div>
@@ -57,7 +57,7 @@
                         <p class="text-3xl font-extralight">A pomada Lyberdade foi feita para você!</p>
                     </div>
                     <div class="text-lg">
-                        <p>Se você <span class="font-bold">sofre</span> <span class="font-bold">com dores nas costas,
+                        <p>Se você <span class="font-bold">sofre</span> <span class="font-bold"> com dores nas costas,
                                 pernas,
                                 articulações ou músculos
                                 cansados...</span></p>
@@ -176,9 +176,10 @@
     </section>
     <section class="bg-primary-color">
         <div class="flex justify-between flex-wrap">
-            <div class="m-auto p-8">
+            <div class="flex flex-1 flex-wrap justify-end p-8 bg-two-women">
                 <figure>
-                    <img src="assets/images/lyberdade-cx-l.png" alt="pomada-lyberdade" class="h-[400px]">
+                    <img src="assets/images/lyberdade-cx-l.png" alt="pomada-lyberdade"
+                        class="max-h-[400px] min-w-[300px] lg:max-h-[500px] lg:min-w-[400px]">
                 </figure>
             </div>
             <div class="p-12">
@@ -193,44 +194,84 @@
                     <li>Atletas</li>
                     <li>Donas de Casa</li>
                 </ul>
-                <button class="btn-primary font-bold w-72 hard-shadwon">
+                <button class="btn-primary font-bold w-72 cursor-pointer pulse-sale-btn-secondary"
+                    (click)="scrollToSection('sale')">
                     ADQUIRIR O MEU!
                 </button>
             </div>
         </div>
     </section>
-    <section id="sale" class="bg-primary-color py-12">
-        <div class="flex justify-around flex-wrap items-end">
-            <div>
+    <section id="sale" class="bg-primary-color pt-12 relative z-10">
+        <div class="flex justify-around flex-wrap items-end z-5">
+            <div class="flex flex-col items-center z-5 cursor-pointer">
                 <div class="flex flex-col px-12 py-2 w-72 rounded-[4rem] hard-shadwon bg-secondary-color md:w-78">
                     <h3 class="text-2xl text-center font-bold mb-3.5 min-w-[218px]">Valor do produto</h3>
                     <figure>
                         <img src="assets/images/lyberdade-cx-l.png" alt="pomada-lyberdade" class="max-h-64">
                     </figure>
-                    <button class="mt-5 mb-3 py-3.5 px-4 font-bold rounded-full hard-shadwon bg-primary-color">
+                    <button
+                        class="mt-5 mb-3 py-3.5 px-4 font-bold rounded-full hard-shadwon bg-primary-color cursor-pointer">
                         49,90 A UNIDADE
                     </button>
                 </div>
-                <button class="mt-5 mb-3 py-3.5 px-4 w-72 font-bold rounded-full hard-shadwon bg-primary-color">
+                <button
+                    class="mt-5 mb-3 py-3.5 px-4 w-72 font-bold rounded-full cursor-pointer pulse-sale-btn bg-primary-color">
                     COMPRAR AGORA!
                 </button>
             </div>
-            <div>
+            <div class="flex flex-col items-center z-5 cursor-pointer">
                 <div
                     class="flex flex-col mt-12 px-12 py-2 w-72 rounded-[4rem] hard-shadwon bg-secondary-color md:w-78 md:mt-0">
                     <h3 class="text-2xl text-center font-bold mb-3.5">Valor para revendedores</h3>
                     <figure>
                         <img src="assets/images/lyberdade-cx-l.png" alt="pomada-lyberdade" class="max-h-64">
                     </figure>
-                    <button class="mt-5 mb-3 py-3.5 px-4 font-bold rounded-full hard-shadwon bg-primary-color">
+                    <button
+                        class="mt-5 mb-3 py-3.5 px-4 font-bold rounded-full hard-shadwon bg-primary-color cursor-pointer">
                         <p>6 unidades por</p>
                         <p>29,90 A UNIDADE</p>
                     </button>
                 </div>
-                <button class="mt-5 mb-3 py-3.5 px-4 w-72 font-bold rounded-full hard-shadwon bg-primary-color">
+                <button
+                    class="mt-5 mb-3 py-3.5 px-4 w-72 font-bold rounded-full bg-primary-color cursor-pointer pulse-sale-btn">
                     QUERO SER UM REVENDEDOR
                 </button>
             </div>
+        </div>
+
+        <!-- Onda inferior -->
+        <div class="absolute bottom-0 left-0 w-full z-0 pointer-events-none">
+            <svg viewBox="0 0 1440 500" width="100%" height="500" preserveAspectRatio="none">
+                <path fill="#000c73" fill-opacity="1">
+                    <animate attributeName="d" dur="6s" repeatCount="indefinite" values="
+                    M0,400 Q450,200 720,300 T1440,400 L1440,500 L0,500 Z;
+                    M0,500 Q450,500 720,400 T1440,500 L1440,500 L0,500 Z;
+                    M0,400 Q450,200 720,300 T1440,400 L1440,500 L0,500 Z
+                    " />
+                </path>
+            </svg>
+            <!--
+            <svg viewBox="0 0 1440 500" width="100%" height="500" preserveAspectRatio="none"
+                style="position:absolute; left:0; bottom:0;">
+                <path fill="#000c73" fill-opacity="0.7">
+                    <animate attributeName="d" dur="6s" repeatCount="indefinite" values="
+                        M0,400 Q450,200 720,300 T1440,400 L1440,500 L0,500 Z;
+                        M0,500 Q450,500 720,400 T1440,500 L1440,500 L0,500 Z;
+                        M0,400 Q450,200 720,300 T1440,400 L1440,500 L0,500 Z
+                    " />
+                </path>
+            </svg>
+            <svg viewBox="0 0 1440 500" width="100%" height="500" preserveAspectRatio="none"
+                style="position:absolute; left:0; bottom:0;">
+                <path fill="#000c73" fill-opacity="1">
+                    <animate attributeName="d" dur="7s" repeatCount="indefinite" values="
+                        M0,420 Q400,300 720,400 T1440,420 L1440,500 L0,500 Z;
+                        M0,500 Q400,500 720,420 T1440,500 L1440,500 L0,500 Z;
+                        M0,420 Q400,300 720,400 T1440,420 L1440,500 L0,500 Z
+                    " />
+                </path>
+            </svg>
+            -->
         </div>
     </section>
     <section>
@@ -242,7 +283,7 @@
         <div>
             <div class="flex mb-3.5">
                 <img src="assets/images/icons/telefone.png" alt="icon-phone">
-                <p class="mx-3.5">(81) 99417-7110</p>
+                <p class="mx-3.5">(81) 99328-2341</p>
             </div>
             <div class="flex">
                 <img src="assets/images/icons/email.png" alt="icon-phone">
@@ -250,9 +291,18 @@
             </div>
         </div>
         <div class="flex justify-center w-full md:w-auto mt-4 md:mt-0">
-            <figure>
-                <img src="assets/images/logo-siga-natural-completa.png" alt="logo-siga" class="w-32">
-            </figure>
+            <button class="cursor-pointer" (click)="openLinkExternal('https://www.siganatural.com.br')">
+                <figure>
+                    <img src="assets/images/logo-siga-natural-completa.png" alt="logo-siga" class="w-32">
+                </figure>
+            </button>
         </div>
     </footer>
+    <div class="fixed bottom-30 right-5 z-30">
+        <button class="cursor-pointer" (click)="sendWhatsApp()">
+            <figure>
+                <img src="assets/images/lyberdade-lp/wa-icon.png" alt="whatsapp-icon" class="w-12">
+            </figure>
+        </button>
+    </div>
 </main>

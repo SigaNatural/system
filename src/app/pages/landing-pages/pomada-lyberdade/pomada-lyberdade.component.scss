@@ -24,7 +24,7 @@ main {
   }
 
   .bg-secondary-color {
-    background: var(--lyberdade-secondary-color) !important;
+    background: var(--lyberdade-secondary-color);
   }
   .bg-primary-color {
     background: var(--lyberdade-primary-color);
@@ -65,6 +65,11 @@ main {
 
   .bg-senhora {
     background-image: url("/assets/images/lyberdade-lp/senhora-com-sombra.png");
+    background-size: cover;
+  }
+
+  .bg-two-women {
+    background-image: url("/assets/images/lyberdade-lp/bg-two-women.png");
     background-size: cover;
   }
 

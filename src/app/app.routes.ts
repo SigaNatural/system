@@ -3,5 +3,5 @@ import { PomadaLyberdadeComponent } from './pages/landing-pages/pomada-lyberdade
 
 export const routes: Routes = [
   { path: '', redirectTo: 'lyberdade', pathMatch: 'full' },
-  { path: 'lyberdade', component: PomadaLyberdadeComponent },
+  { path: 'lyberdade', component: PomadaLyberdadeComponent, title: 'Pomada Lyberdade' },
 ];
