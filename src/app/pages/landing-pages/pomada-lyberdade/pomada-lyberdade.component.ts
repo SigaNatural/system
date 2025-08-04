@@ -3,15 +3,12 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-pomada-lyberdade',
-  imports: [
-    CommonModule
-  ],
+  imports: [CommonModule],
   templateUrl: './pomada-lyberdade.component.html',
   styleUrl: './pomada-lyberdade.component.scss',
-  standalone: true
+  standalone: true,
 })
 export class PomadaLyberdadeComponent {
-
   imagesInViewBenefit: boolean[] = [false, false, false, false, false];
 
   ngAfterViewInit() {
@@ -39,7 +36,8 @@ export class PomadaLyberdadeComponent {
   }
 
   sendWhatsApp() {
-    var waText = 'Olá, venho através do site Pomada Lyberdade solicitar mais informações sobre a pomada.';
+    var waText =
+      'Olá, venho através do site Pomada Lyberdade solicitar mais informações sobre a pomada.';
     const url = `https://wa.me/5581993282341/?text=${waText}`;
     window.open(url, '_blank');
   }
